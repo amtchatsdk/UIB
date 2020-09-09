@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp3"
+    android:layout_marginEnd="@dimen/dp60"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/vL_Bot_Image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/chat_bubble_bot_background"
+        android:lineSpacingExtra="@dimen/dp2"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dp20"
+        android:paddingTop="@dimen/dp5"
+        android:paddingEnd="@dimen/dp5"
+        android:paddingBottom="@dimen/dp7"
+        android:textColor="@color/black"
+        android:textIsSelectable="true"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/vI_Image_By_Bot"
+            android:layout_width="@dimen/dp_300"
+            android:layout_height="@dimen/dp_300"
+            android:contentDescription="@string/bot_image"
+            android:scaleType="fitXY"
+            android:src="@drawable/test_image_bot" />
+    </LinearLayout>
+
+
+</RelativeLayout>

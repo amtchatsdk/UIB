@@ -1,0 +1,86 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+    /*lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError true
+    }*/
+    defaultConfig {
+        minSdkVersion 22
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0.7"
+// buildConfigFiled "String", "HOST", '"dummyHost"'
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+
+
+        debug {
+            minifyEnabled false
+
+            buildConfigField "String", "HOST", '"https://beta-chatbot-v2connector.unificationengine.com/"'
+            buildConfigField "String", "CHAT_HISTORY_HOST", '"https://beta-amk-api.unificationengine.com/"'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        beta {
+            minifyEnabled false
+
+            buildConfigField "String", "HOST", '"https://beta-chatbot-v2connector.unificationengine.com/"'
+            buildConfigField "String", "CHAT_HISTORY_HOST", '"https://beta-amk-api.unificationengine.com/"'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            buildConfigField "String", "HOST", '"https://beta-chatbot-v2connector.unificationengine.com/"'
+            buildConfigField "String", "CHAT_HISTORY_HOST", '"https://beta-amk-api.unificationengine.com/"'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: "${buildDir.path}/resolvedArtifacts", include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    //implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.core:core-ktx:1.3.1'
+    implementation("io.coil-kt:coil:0.11.0")
+    implementation 'junit:junit:4.13'
+    //AAR
+    implementation 'androidx.test.ext:junit:1.1.2'
+    implementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.star_zero:sse:1.2.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.google.android.libraries.places:places:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.8.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.airbnb.android:lottie:3.4.1'
+    implementation("io.coil-kt:coil:0.11.0")
+    //implementation project(path: ':circleimageview-3.1.0')
+    //implementation files('libs/circleimageview-3.1.0.aar')
+
+}

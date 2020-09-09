@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="write_a_message">Try typing here</string>
+    <string name="error_msg_for_edit_text">Empty message</string>
+
+    <string name="document" translatable="false">Document</string>
+    <string name="camera" translatable="false">Camera</string>
+    <string name="gallery" translatable="false">Gallery</string>
+    <string name="audio" translatable="false">Audio</string>
+    <string name="location" translatable="false">Location</string>
+    <string name="contact" translatable="false">Contact</string>
+    <string name="default_start">00:00</string>
+    <string name="audio_image">audio_image</string>
+    <string name="google_places_api_key" translatable="false">AIzaSyC-CJUKKcqDAsMv-liZLeWOyyeNFkL-aFg</string>
+    <string name="send_this_location">Send this location</string>
+    <string name="loading_contacts">Loading contacts..</string>
+    <string name="deselect_image">deselect_image</string>
+    <string name="select_image">select image</string>
+    <string name="send_contact">send contact</string>
+    <string name="zero_minute_single_digit_seconds">00:0%1d</string>
+    <string name="zero_minute_two_digit_seconds">00:%1d</string>
+    <string name="single_digit_minute_single_digit_seconds">0%1d:0%1d</string>
+    <string name="single_digit_minute_two_digit_seconds">0%1d:%1d</string>
+    <string name="two_digit_minute_single_digit_seconds">%1d:0%1d</string>
+    <string name="two_digit_minute_two_digit_seconds">%1d:%1d</string>
+    <string name="chat_image">chat image</string>
+    <string name="bot_image">bot image</string>
+    <string name="financial_awareness_pdf">Financial awareness.pdf</string>
+    <string name="_12_pages_docx">Document</string>
+    <string name="_2_00pm">2:00pm</string>
+    <string name="_0_30">0:30</string>
+    <string name="amt_bangalore_number">AMT Bangalore Number</string>
+    <string name="want_to_upload_record">Want to upload record?</string>
+    <string name="appId_null" translatable="false">App Id required</string>
+    <string name="botId_null" translatable="false">Bot Id required</string>
+    <string name="close">close</string>
+    <string name="remove">remove</string>
+
+</resources>

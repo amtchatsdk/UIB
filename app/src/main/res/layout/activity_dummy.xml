@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/agent_pic_"
+            android:layout_width="?actionBarSize"
+            android:src="@drawable/placeholder"
+            android:padding="@dimen/dp5"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:id="@+id/close_icon"
+            android:layout_width="?actionBarSize"
+            android:src="@drawable/cancel"
+            android:padding="@dimen/dp5"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:paddingStart="@dimen/dp5"
+            android:layout_marginStart="?actionBarSize"
+            android:gravity="center"
+            android:text="Bhaskar Pasupula"
+            android:textSize="@dimen/sp18"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UIB</string>
+    <string name="change_language">تغيير اللغة</string>
+    <string name="support">الدعم</string>
+    <string name="no_data_found">لم يتم العثور على محادثات</string>
+</resources>

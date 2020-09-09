@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AMK</string>
+    <string name="change_language">Change language</string>
+    <string name="support">Support</string>
+    <string name="no_data_found">No Conversations found</string>
+
+</resources>

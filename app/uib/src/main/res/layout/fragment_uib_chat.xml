@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/agent_pic_"
+                android:layout_width="?actionBarSize"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:padding="@dimen/dp5"
+                android:src="@drawable/placeholder" />
+
+            <ImageView
+                android:id="@+id/close_icon"
+                android:layout_width="?actionBarSize"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/dp5"
+                android:src="@drawable/ic_close_black_24dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/agent_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="?actionBarSize"
+                android:gravity="center"
+                android:paddingStart="@dimen/dp5"
+                android:textSize="@dimen/sp18"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/et_container"
+        android:layout_below="@id/toolbar"
+        android:padding="@dimen/dp3"
+        app:reverseLayout="true"
+        app:stackFromEnd="true" />
+
+    <TextView
+        android:id="@+id/tv_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/et_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dp7"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:elevation="@dimen/dp10"
+            android:background="@drawable/edit_text_background">
+
+            <ImageView
+                android:id="@+id/iv_remove_reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/dp3"
+                android:contentDescription="@string/remove"
+                android:padding="@dimen/dp3"
+                android:src="@drawable/ic_close_black_24dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_reply_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/iv_remove_reply"
+                android:singleLine="true"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp2"
+                android:paddingEnd="@dimen/dp4"
+                android:paddingBottom="@dimen/dp2"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/et_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_reply_msg"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:drawableEnd="@drawable/ic_attach_file_black_24dp"
+                android:hint="@string/write_a_message"
+                android:imeOptions="actionNone"
+                android:importantForAutofill="no"
+                android:isScrollContainer="true"
+                android:maxHeight="@dimen/dp120"
+                android:minHeight="@dimen/dp45"
+                android:paddingStart="@dimen/dp10"
+                android:paddingEnd="@dimen/dp10"
+                tools:ignore="TextFields" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/send"
+            android:layout_width="@dimen/dp45"
+            android:layout_height="@dimen/dp45"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp3"
+            android:layout_marginEnd="@dimen/dp3"
+            android:background="@drawable/send_button_background"
+            android:drawableStart="@drawable/ic_send_black_24dp"
+            android:elevation="@dimen/dp10"
+            android:gravity="center"
+            android:paddingStart="@dimen/dp10"
+            android:paddingEnd="@dimen/dp10"
+            tools:layoutDirection="rtl" />
+
+    </LinearLayout>
+</RelativeLayout><!--
+</RelativeLayout>-->

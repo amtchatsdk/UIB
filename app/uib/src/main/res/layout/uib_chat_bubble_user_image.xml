@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentEnd="true"
+    android:layout_marginStart="@dimen/dp60">
+
+
+    <ImageView
+        android:id="@+id/vI_Image_By_User"
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="@dimen/dp_300"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/dp3"
+        android:layout_marginBottom="@dimen/dp7"
+        android:adjustViewBounds="true"
+        android:background="@drawable/chat_bubble_user_background"
+        android:contentDescription="@string/chat_image"
+        android:cropToPadding="true"
+        android:gravity="fill_horizontal"
+        android:paddingStart="@dimen/dp5"
+        android:paddingTop="@dimen/dp5"
+        android:paddingEnd="@dimen/dp15"
+        android:paddingBottom="@dimen/dp7"
+        android:scaleType="centerCrop"
+        android:src="@drawable/test_image" />
+
+    <ProgressBar
+        android:id="@+id/vP_ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/vI_Image_By_User"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="125dp"
+        android:visibility="visible"
+        android:layout_marginEnd="@dimen/dp130" />
+
+
+</RelativeLayout>
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentEnd="true"
+    android:layout_marginStart="@dimen/dp60"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="end"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/vI_edit"
+            android:visibility="gone"
+            android:layout_width="24dp"
+            android:src="@drawable/ic_edit_24"
+            android:layout_gravity="center"
+            android:layout_height="24dp"/>
+        <TextView
+            android:id="@+id/tv_message_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/dp3"
+            android:background="@drawable/chat_bubble_user_background"
+            android:gravity="center|start"
+            android:lineSpacingExtra="@dimen/dp2"
+            android:paddingStart="@dimen/dp10"
+            android:paddingTop="@dimen/dp4"
+            android:paddingEnd="@dimen/dp20"
+            android:paddingBottom="@dimen/dp10"
+            android:textAlignment="gravity"
+            android:textColor="@color/black"
+            android:textIsSelectable="true" />
+    </LinearLayout>
+
+</RelativeLayout>
