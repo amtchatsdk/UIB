@@ -25,7 +25,7 @@
         <provider
             android:name=".utils.GenericFileProvider"
             android:authorities="${applicationId}.provider"
-            android:exported="true"
+            android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
