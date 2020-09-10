@@ -8,22 +8,22 @@ class UIBConfig(
     var botId: String,
     var userId: String? = null,
     var botName: String,
-    var botIcon: String,
-    var chatPreview: Boolean? = false,
-   // var chatWorkingHours: WorkingHours,
-    var inactiveChatPreviewMsg: String? = null,
-    var activeChatPreviewMsg: String? = null
+    var botIcon: String
+    // var chatPreview: Boolean? = false,
+    // var chatWorkingHours: WorkingHours,
+    // var inactiveChatPreviewMsg: String? = null,
+    // var activeChatPreviewMsg: String? = null
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString()!!,
         parcel.readString()!!,
         parcel.readString()!!,
         parcel.readString()!!,
-        parcel.readString()!!,
-        parcel.readValue(Boolean::class.java.classLoader) as? Boolean,
-       // parcel.readParcelable(WorkingHours::class.java.classLoader)!!,
-        parcel.readString(),
-        parcel.readString()
+        parcel.readString()!!
+        // parcel.readValue(Boolean::class.java.classLoader) as? Boolean,
+        // parcel.readParcelable(WorkingHours::class.java.classLoader)!!,
+        // parcel.readString(),
+        // parcel.readString()
     ) {
     }
 
@@ -33,10 +33,10 @@ class UIBConfig(
         dest?.writeString(userId)
         dest?.writeString(botName)
         dest?.writeString(botIcon)
-        dest?.writeString(inactiveChatPreviewMsg)
+        //dest?.writeString(inactiveChatPreviewMsg)
         //dest?.writeParcelable(chatWorkingHours, flags)
-        dest?.writeByte(if (chatPreview!!) 1 else 0)
-        dest?.writeString(activeChatPreviewMsg)
+        //dest?.writeByte(if (chatPreview!!) 1 else 0)
+        //dest?.writeString(activeChatPreviewMsg)
 
     }
 

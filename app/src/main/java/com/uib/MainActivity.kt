@@ -59,13 +59,14 @@ class MainActivity : AppCompatActivity() {
         val editor = sharedPreferences.edit()
 
         if (sharedPreferences.getString("UserId",null)!=null){
-                userId= sharedPreferences.getString("UserId",null)
-            }else{
-                userId= Settings.Secure.getString(contentResolver,
-                    Settings.Secure.ANDROID_ID)
-                editor?.putString("UserId",userId)
-                editor?.apply()
-            }
+            userId= sharedPreferences.getString("UserId",null)
+        }else{
+            userId= Settings.Secure.getString(contentResolver,
+                Settings.Secure.ANDROID_ID)
+
+            editor?.putString("UserId",userId)
+            editor?.apply()
+        }
 
         Log.d("USER_ID","$userId")
 
@@ -151,15 +152,17 @@ class MainActivity : AppCompatActivity() {
             //supportActionBar?.hide()
             val uibConfig = UIBConfig(
                 /*amk*/
-                appId="88148051-9b63-46c3-9c8a-a7b25f5f8a1e",
-                botId="6469c178-ff6f-4cf5-88f2-a8ac7ea56d4c",
+                /*appId="88148051-9b63-46c3-9c8a-a7b25f5f8a1e",
+                botId="6469c178-ff6f-4cf5-88f2-a8ac7ea56d4c",*/
+                appId = "9686f58b-7a65-4af9-b1bb-7dfc0fb85ef6",
+                botId = "6469c178-ff6f-4cf5-88f2-a8ac7ea56d4c",
                 userId = userId,
                 botName = "AMK",
-                botIcon = "https://i.postimg.cc/HnNZPHS6/computer-icons-user-clip-art-user.jpg",
-                chatPreview = chatPreviewValue!!,
-                inactiveChatPreviewMsg = "z Z z …  ich bin gerade nicht erreichbar. Sie können mir aber eine E-Mail schreiben an uschi@schwaebisch-gmuend.de",
+                botIcon = "https://i.postimg.cc/HnNZPHS6/computer-icons-user-clip-art-user.jpg"
+                // chatPreview = chatPreviewValue!!,
+                //inactiveChatPreviewMsg = "z Z z …  ich bin gerade nicht erreichbar. Sie können mir aber eine E-Mail schreiben an uschi@schwaebisch-gmuend.de",
                 //chatWorkingHours = workingHours,
-                activeChatPreviewMsg = "Welcome to uib"
+                // activeChatPreviewMsg = "Welcome to uib"
             )
             val mFragment = UIBChatFragment()
             val bundle = Bundle()

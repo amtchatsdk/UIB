@@ -247,8 +247,8 @@ class UIBChatFragment() : Fragment(), UIBListener,
         rvChatList?.adapter = supportChatAdapter
         layoutManager.stackFromEnd = true
         rvChatList?.layoutManager = layoutManager
-        if (uibConfig?.chatPreview!!) {
-            /*if (uibConfig?.chatWorkingHours?.workingTimeStatus!!) {
+        /*  if (uibConfig?.chatPreview!!) {
+              *//*if (uibConfig?.chatWorkingHours?.workingTimeStatus!!) {
                 if (isCurrentTimeInBetweenSlots(
                         uibConfig?.chatWorkingHours?.workingTime?.get(getDayOfWeekPosition())?.time?.startTime,
                         uibConfig?.chatWorkingHours?.workingTime?.get(getDayOfWeekPosition())?.time?.endTime,
@@ -273,16 +273,16 @@ class UIBChatFragment() : Fragment(), UIBListener,
                         rvChatList?.smoothScrollToPosition(supportChatAdapter?.itemCount!!)
                     }
                 }
-            } else {*/
+            } else {*//*
                 toolBar?.setBackgroundColor(resources.getColor(R.color.uib_red))
                 agentPic?.load(uibConfig?.botIcon)
                 agentName?.text = uibConfig?.botName
-           /* }*/
-        } else {
-            toolBar?.setBackgroundColor(resources.getColor(R.color.colorPrimary))
-            agentPic?.load(uibConfig?.botIcon)
-            agentName?.text = uibConfig?.botName
-        }
+           *//* }*//*
+        } else {*/
+        toolBar?.setBackgroundColor(resources.getColor(R.color.colorPrimary))
+        agentPic?.load(uibConfig?.botIcon)
+        agentName?.text = uibConfig?.botName
+        /* }*/
         //layoutManager.reverseLayout = true
 
         sendMessage?.setOnClickListener(this)
@@ -292,25 +292,25 @@ class UIBChatFragment() : Fragment(), UIBListener,
             ChatHistoryRepo(responseListener = this)
         arrayByte = getAuth(uibConfig?.appId!!, uibConfig?.botId!!, uibConfig?.userId!!)
         Log.d("auth", "$arrayByte")
-       /* if ((uibConfig?.chatWorkingHours?.workingTimeStatus!! && isCurrentTimeInBetweenSlots(
-                uibConfig?.chatWorkingHours?.workingTime?.get(getDayOfWeekPosition())?.time?.startTime,
-                uibConfig?.chatWorkingHours?.workingTime?.get(getDayOfWeekPosition())?.time?.endTime,
-                uibConfig?.chatWorkingHours?.timeZone!!
-            )) || (!uibConfig?.chatWorkingHours?.workingTimeStatus!!)
-        ) {*/
-            chatHistoryRepo.getChats(
-                appId = uibConfig?.appId!!,
-                botId = uibConfig?.botId!!,
-                userId = uibConfig?.userId!!,
-                authToken = arrayByte!!, skip = 0, limit = 25
-            )
-            //this.userId = UUID.randomUUID().toString()
-            uibConnection?.connect(
-                appId = uibConfig?.appId!!,
-                botId = uibConfig?.botId!!,
-                userId = uibConfig?.userId!!
-            )
-       /* }*/
+        /* if ((uibConfig?.chatWorkingHours?.workingTimeStatus!! && isCurrentTimeInBetweenSlots(
+                 uibConfig?.chatWorkingHours?.workingTime?.get(getDayOfWeekPosition())?.time?.startTime,
+                 uibConfig?.chatWorkingHours?.workingTime?.get(getDayOfWeekPosition())?.time?.endTime,
+                 uibConfig?.chatWorkingHours?.timeZone!!
+             )) || (!uibConfig?.chatWorkingHours?.workingTimeStatus!!)
+         ) {*/
+        chatHistoryRepo.getChats(
+            appId = uibConfig?.appId!!,
+            botId = uibConfig?.botId!!,
+            userId = uibConfig?.userId!!,
+            authToken = arrayByte!!, skip = 0, limit = 25
+        )
+        //this.userId = UUID.randomUUID().toString()
+        uibConnection?.connect(
+            appId = uibConfig?.appId!!,
+            botId = uibConfig?.botId!!,
+            userId = uibConfig?.userId!!
+        )
+        /* }*/
         Log.d("Package_name", activity?.applicationContext?.packageName!!)
 
         /*Log.d(
@@ -372,21 +372,21 @@ class UIBChatFragment() : Fragment(), UIBListener,
     }
 
 
-   /* private fun getDayOfWeekPosition(): Int {
-        var day = 0
-        val dayName: String = getCurrentDay()
-        for (i in 0 until uibConfig?.chatWorkingHours?.workingTime?.size!!) {
-            if (uibConfig?.chatWorkingHours?.workingTime?.get(i)?.dayName?.equals(
-                    dayName,
-                    true
-                )!!
-            ) {
-                day = i
-                break
-            }
-        }
-        return day
-    }*/
+    /* private fun getDayOfWeekPosition(): Int {
+         var day = 0
+         val dayName: String = getCurrentDay()
+         for (i in 0 until uibConfig?.chatWorkingHours?.workingTime?.size!!) {
+             if (uibConfig?.chatWorkingHours?.workingTime?.get(i)?.dayName?.equals(
+                     dayName,
+                     true
+                 )!!
+             ) {
+                 day = i
+                 break
+             }
+         }
+         return day
+     }*/
 
     override fun setUpMediaRecorder() {
         mediaRecorder = MediaRecorder()
@@ -1075,22 +1075,22 @@ class UIBChatFragment() : Fragment(), UIBListener,
                 )
             }
 
-         /*   if (attachLocation) {
-                menuList.add(
-                    UIBAttachmentMenu(
-                        "Location",
-                        R.drawable.ic_location
-                    )
-                )
-            }
-            if (attachContact) {
-                menuList.add(
-                    UIBAttachmentMenu(
-                        "Contact",
-                        R.drawable.ic_contact
-                    )
-                )
-            }*/
+            /*   if (attachLocation) {
+                   menuList.add(
+                       UIBAttachmentMenu(
+                           "Location",
+                           R.drawable.ic_location
+                       )
+                   )
+               }
+               if (attachContact) {
+                   menuList.add(
+                       UIBAttachmentMenu(
+                           "Contact",
+                           R.drawable.ic_contact
+                       )
+                   )
+               }*/
         }
 
         return menuList
@@ -1115,8 +1115,8 @@ class UIBChatFragment() : Fragment(), UIBListener,
         attachFromGallery = gallery
         attachDocument = document
         attachAudio = audio
-       /* attachLocation = location
-        attachContact = contact*/
+        /* attachLocation = location
+         attachContact = contact*/
         needAttachMenu =
             attachFromCamera || attachFromGallery || attachDocument || attachAudio || attachLocation || attachContact
 
@@ -1143,21 +1143,21 @@ class UIBChatFragment() : Fragment(), UIBListener,
                     }
                 } else {
                     if (supportChatAdapter?.itemCount == 0) {
-                      /*  if (uibConfig?.chatWorkingHours?.workingTimeStatus!! && isCurrentTimeInBetweenSlots(
-                                uibConfig?.chatWorkingHours?.workingTime?.get(getDayOfWeekPosition())?.time?.startTime,
-                                uibConfig?.chatWorkingHours?.workingTime?.get(getDayOfWeekPosition())?.time?.endTime,
-                                uibConfig?.chatWorkingHours?.timeZone!!
-                            )
-                        ) {*/
-                            val chat = Chat()
-                            chat.msg = uibConfig?.activeChatPreviewMsg
-                            chat.type = "text"
-                            chat.from = 1
-                            activity?.runOnUiThread {
-                                supportChatAdapter?.addItem(chat = chat)
-                                rvChatList?.smoothScrollToPosition(supportChatAdapter?.itemCount!!)
-                            }
-                      /*  }*/
+                        /*  if (uibConfig?.chatWorkingHours?.workingTimeStatus!! && isCurrentTimeInBetweenSlots(
+                                  uibConfig?.chatWorkingHours?.workingTime?.get(getDayOfWeekPosition())?.time?.startTime,
+                                  uibConfig?.chatWorkingHours?.workingTime?.get(getDayOfWeekPosition())?.time?.endTime,
+                                  uibConfig?.chatWorkingHours?.timeZone!!
+                              )
+                          ) {*/
+                        val chat = Chat()
+                        //chat.msg = uibConfig?.activeChatPreviewMsg
+                        chat.type = "text"
+                        chat.from = 1
+                        activity?.runOnUiThread {
+                            supportChatAdapter?.addItem(chat = chat)
+                            rvChatList?.smoothScrollToPosition(supportChatAdapter?.itemCount!!)
+                        }
+                        /*  }*/
                     }
                 }
             } else {
@@ -1289,7 +1289,7 @@ class UIBChatFragment() : Fragment(), UIBListener,
 //Places
             }
         }
-       // Toast.makeText(activity, "$type selected", Toast.LENGTH_SHORT).show()
+        // Toast.makeText(activity, "$type selected", Toast.LENGTH_SHORT).show()
     }
 
     private fun requestRunTimePermissionForCamera() {
@@ -1636,16 +1636,16 @@ class UIBChatFragment() : Fragment(), UIBListener,
                     this,
                     filePath!!
                 ).execute().get()
-                  val reqBody: RequestBody = MultipartBody.Builder().setType(MultipartBody.FORM)
-                      .addFormDataPart(
-                          "message",
-                          mFile?.path,
-                          RequestBody.create(
-                              "image/*".toMediaTypeOrNull(),
-                              mFile!!
-                          )
-                      ).addFormDataPart("type", "image").build()
-                 // apiCallForImage(reqBody, imageBitmap!!)
+                val reqBody: RequestBody = MultipartBody.Builder().setType(MultipartBody.FORM)
+                    .addFormDataPart(
+                        "message",
+                        mFile?.path,
+                        RequestBody.create(
+                            "image/*".toMediaTypeOrNull(),
+                            mFile!!
+                        )
+                    ).addFormDataPart("type", "image").build()
+                // apiCallForImage(reqBody, imageBitmap!!)
 
             }
             requestCode == SELECT_PICTURE && resultCode == RESULT_OK -> {
@@ -1690,7 +1690,7 @@ class UIBChatFragment() : Fragment(), UIBListener,
                 //println(" Width= ${imageBitmap?.width}  Height= ${imageBitmap?.height} ")
 
 
-               // apiCallForImage(reqBody, imageBitmap!!)
+                // apiCallForImage(reqBody, imageBitmap!!)
             }
             requestCode == 436 -> {
                 val lat = data?.getDoubleExtra(AppConstants.LAT, 0.0)
